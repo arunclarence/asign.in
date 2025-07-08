@@ -1,0 +1,15 @@
+[11-Sep-2014 23:28:05 Asia/Calcutta] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/aruncp/public_html/includes/resize-class.php on line 34
+[11-Sep-2014 23:28:05 Asia/Calcutta] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/aruncp/public_html/includes/resize-class.php on line 35
+[11-Sep-2014 23:28:05 Asia/Calcutta] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/aruncp/public_html/includes/resize-class.php on line 78
+[11-Sep-2014 23:29:16 Asia/Calcutta] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/aruncp/public_html/includes/resize-class.php on line 34
+[11-Sep-2014 23:29:16 Asia/Calcutta] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/aruncp/public_html/includes/resize-class.php on line 35
+[11-Sep-2014 23:29:16 Asia/Calcutta] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/aruncp/public_html/includes/resize-class.php on line 78
+[11-Sep-2014 23:29:30 Asia/Calcutta] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/aruncp/public_html/includes/resize-class.php on line 34
+[11-Sep-2014 23:29:30 Asia/Calcutta] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/aruncp/public_html/includes/resize-class.php on line 35
+[11-Sep-2014 23:29:30 Asia/Calcutta] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/aruncp/public_html/includes/resize-class.php on line 78
+[17-Jun-2016 21:01:27 Asia/Bangkok] PHP Warning:  mysqli_connect(): Headers and client library minor version mismatch. Headers:50545 Library:50630 in /home/aruncp/public_html/includes/MysqlConnect.php on line 28
+[17-Jun-2016 21:29:43 Asia/Bangkok] PHP Warning:  mysqli_connect(): Headers and client library minor version mismatch. Headers:50545 Library:50630 in /home/aruncp/public_html/includes/MysqlConnect.php on line 28
+[14-Oct-2016 14:30:37 Asia/Bangkok] PHP Warning:  mysqli_connect(): Headers and client library minor version mismatch. Headers:50545 Library:50633 in /home/aruncp/public_html/includes/MysqlConnect.php on line 28
+[15-Oct-2016 17:30:42 Asia/Bangkok] PHP Warning:  mysqli_connect(): Headers and client library minor version mismatch. Headers:50545 Library:50633 in /home/aruncp/public_html/includes/MysqlConnect.php on line 28
+[15-Oct-2016 17:31:15 Asia/Bangkok] PHP Warning:  mysqli_connect(): Headers and client library minor version mismatch. Headers:50545 Library:50633 in /home/aruncp/public_html/includes/MysqlConnect.php on line 28
+[15-Oct-2016 17:39:50 Asia/Bangkok] PHP Warning:  mysqli_connect(): Headers and client library minor version mismatch. Headers:50545 Library:50633 in /home/aruncp/public_html/includes/MysqlConnect.php on line 28

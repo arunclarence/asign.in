@@ -1,0 +1,80 @@
+<?php
+require_once '../includes/checkLogin.php';
+require_once '../includes/MysqlConnect.php';
+require_once '../includes/resize-class.php';
+$con = MysqlConnect::getInstance();
+	$portfolio_id=$_GET['portfolio_id'];
+$selecc=$con->select("SELECT * FROM `trendmaker_portfolio` WHERE `portfolio_id`='".$portfolio_id."' ",true);
+?>
+
+<html>
+<head>
+<title>Admin</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Copyright" content="arirusmanto.com">
+<meta name="description" content="Admin MOS Template">
+<meta name="keywords" content="Admin Page">
+<meta name="author" content="Ari Rusmanto">
+<meta name="language" content="Bahasa Indonesia">
+
+<link rel="shortcut icon" href="stylesheet/img/devil-icon.png"> <!--Pemanggilan gambar favicon-->
+<link rel="stylesheet" type="text/css" href="mos-css/mos-style.css"> <!--pemanggilan file css-->
+</head>
+
+<body>
+<div id="header">
+	<div class="inHeader">
+		<div class="mosAdmin">
+		<a href="admin.php">Welcome Admin</a><br>
+		<a href="">Visit website</a> | <a href="logout.php">Logout</a>
+		</div>
+	<div class="clear"></div>
+	</div>
+</div>
+
+<div id="wrapper">
+	<div id="leftBar">
+	<ul>
+		<li><a href="portfolio.php">Add Portfolio</a></li>
+		<li><a href="viewPortfolio.php">View Portfolio</a></li>
+		<li><a href="changePassword.php">Change Password</a></li>
+	</ul>
+	</div>
+	<div id="rightContent">
+	<h3>Edit Portfolio</h3>
+	
+    <form id="form1" name="form1" method="post" action="action/editPortfolio.php"  class="niceform" onSubmit="return submit1()" enctype="multipart/form-data">
+  <?php if(isset($_GET['error01'])) { ?>
+<table align="center"><tr align="center"><td align="center" style="color:#FF0000"><div class="informasi"><?php echo $_GET['error01']; ?></div></td></tr></table><?php } ?>
+  <?php if(isset($_GET['sucess'])) { ?>
+<table align="center"><tr align="center"><td align="center" style="color:#FF0000"><div class="sukses"><?php echo $_GET['sucess']; ?></div></td></tr></table><?php } ?>
+  <?php if(isset($_GET['erroradd'])) { ?>
+<table align="center"><tr align="center"><td align="center" style="color:#FF0000"><div class="gagal"><?php echo $_GET['erroradd']; ?></div></td></tr></table><?php } ?> 
+
+		<table width="95%">
+         <?php foreach($selecc as $value7) { ?>
+         
+         <table width="95%">
+			<tr>
+			  <td><b>Website : <span style="color:#F00">*</span></b></td><td><input type="text" name="title" id="title" class="panjang"  value="<?php echo $value7['portfolio_title']; ?>"></td></tr>
+              			<input type="hidden" name="portfolio_id" id="portfolio_id"  value="<?php echo $portfolio_id; ?>" />
+			<tr>
+			  <td><b>Website Link : <span style="color:#F00">*</span></b></td><td><input type="text" name="link" id="link" class="panjang" value="<?php echo $value7['portfolio_link']; ?>"></td></tr>
+			<tr>
+			  <td><b>Project : <span style="color:#F00">*</span></b></td><td><input type="file" name="file" id="file"><?php if($value7['portfolio_project']!="") { ?><img src="../portfolio/thumbs/<?php echo $value7['portfolio_project']; ?>" width="60" height="60" /><?php } } ?></td></tr>
+			<tr><td></td><td>   
+         
+         	<input type="submit" name="submit" id="submit" class="button" value="Submit">
+			<input type="reset" name="reset" id="reset" class="button" value="Reset">
+			</td></tr>
+		</table>  
+                        <p align="center"><a href="viewPortfolio.php" style="text-decoration:none"><b> << Back </b></a></p>
+     
+        </form>
+	</div>
+<div class="clear"></div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>
